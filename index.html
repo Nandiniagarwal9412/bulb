@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:300px;
+            height:350px;
+        }
+        button{
+            background-color: blue;
+            color:white;
+            padding:10px;
+            border:none;
+            /* display: flex; */
+            margin-bottom: 20px;
+        }
+        .container{
+            text-align: center;
+        }
+        @media(max-width:300px){
+            img{
+                width:200px;
+                height:200px;
+                text-align: center;
+
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="leftImage">
+                <img src="on.jpeg" alt="">
+                          </div>
+                          <button id="leftBtn">Switch On</button>
+                          </div>
+            <div class="right">
+                <div class="rightImage">
+                    <!-- <img src="offf.jpeg" alt=""> -->
+                </div>
+                <button id="rightBtn">Switch Off</button>
+            </div>
+        </div>
+        <script>
+            let leftBtn=document.getElementById("leftBtn");
+            leftBtn.addEventListener("click",function(){
+                let leftImage=document.querySelector("img");
+                leftImage.src="on.jpeg"
+            })
+            let rightBtn=document.getElementById("rightBtn");
+            rightBtn.addEventListener("click",function(){
+                let rightImage=document.querySelector("img");
+                rightImage.src="offf.jpeg";
+            })
+        </script>
+    </body>
+</html>
